@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# If you deploy on Netlify: enable Identity + Git Gateway in your Netlify
+# site settings and this backend works with no extra setup.
+#
+# If you're NOT using Netlify, replace the block above with:
+# backend:
+#   name: github
+#   repo: your-username/nescafood
+#   branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "src/content/products"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. From $12" }
+      - { label: "Picture", name: "image", widget: "image" }
+      - { label: "Tag", name: "tag", widget: "string", required: false, hint: "e.g. Bestseller, Spicy" }

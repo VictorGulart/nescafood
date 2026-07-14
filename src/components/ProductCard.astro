@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  price?: string;
+  image: string;
+  tag?: string;
+  delay?: number;
+}
+const { title, description, price, image, tag, delay = 0 } = Astro.props;
+---
+
+<article
+  class="group relative ticket-edge bg-ink-2 rounded-2xl overflow-hidden border border-paper/10 transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50"
+  data-aos="fade-up"
+  data-aos-delay={delay}
+>
+  <div class="relative h-52 overflow-hidden">
+    <img
+      src={image}
+      alt={title}
+      loading="lazy"
+      class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-2 via-transparent to-transparent opacity-80"></div>
+
+    {tag && (
+      <span class="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-widest bg-paper text-ink px-2 py-1 rounded-full">
+        {tag}
+      </span>
+    )}
+
+    <span class="stamp absolute top-3 right-3 font-mono text-[10px] uppercase tracking-widest border-2 border-mustard text-mustard px-2 py-1 rounded-full">
+      Made fresh
+    </span>
+  </div>
+
+  <div class="p-5">
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class="font-display italic text-xl text-paper leading-snug">{title}</h3>
+      {price && <span class="font-mono text-xs text-mustard whitespace-nowrap">{price}</span>}
+    </div>
+    <div class="dash-rule my-3"></div>
+    <p class="text-sm text-paper/70 leading-relaxed">{description}</p>
+  </div>
+</article>
