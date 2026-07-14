@@ -1,0 +1,30 @@
+{
+  "heroBadge": "Small batch · Home kitchen · Local delivery",
+  "heroHeadingBefore": "Real food, ",
+  "heroHeadingEmphasis": "cooked",
+  "heroHeadingAfter": " like it's for family.",
+  "heroDescription": "Nescafood is a small kitchen serving big, honest flavor — trays, skewers and pots made to order for parties, offices and everyday cravings.",
+  "heroImage": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop",
+  "primaryCtaLabel": "Get a quote on WhatsApp",
+  "secondaryCtaLabel": "View the menu →",
+  "whyUs": [
+    {
+      "title": "Cooked fresh, per order",
+      "body": "Nothing sits under a heat lamp. Every tray is prepared once you confirm."
+    },
+    {
+      "title": "Local pickup & delivery",
+      "body": "Order over WhatsApp and we'll sort timing and delivery together."
+    },
+    {
+      "title": "Built for groups",
+      "body": "Catering trays and bulk orders for offices, parties and family gatherings."
+    }
+  ],
+  "menuEyebrow": "On the menu",
+  "menuHeading": "Crowd favorites",
+  "menuLinkLabel": "Full menu →",
+  "ctaHeading": "Planning something? Let's cook for it.",
+  "ctaBody": "Send us your headcount and date — we'll reply with a quote same day.",
+  "ctaButtonLabel": "Get a quote on WhatsApp"
+}

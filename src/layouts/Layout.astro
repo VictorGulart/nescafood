@@ -1,6 +1,7 @@
 ---
 import 'aos/dist/aos.css';
 import '../styles/global.css';
+import settings from '../data/settings.json';
 
 interface Props {
   title: string;
@@ -8,9 +9,7 @@ interface Props {
 }
 const { title, description = 'Nescafood — home-cooked meals, made to order.' } = Astro.props;
 
-const WHATSAPP_NUMBER = '11234567890'; // TODO: replace with the real WhatsApp number, digits only, country code first
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi Nescafood! I'd like to get a quote for an order.");
-const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+const waHref = `https://wa.me/${settings.whatsappNumber}?text=${encodeURIComponent(settings.whatsappMessage)}`;
 ---
 
 <!doctype html>

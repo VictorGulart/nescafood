@@ -28,3 +28,41 @@ collections:
       - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. From $12" }
       - { label: "Picture", name: "image", widget: "image" }
       - { label: "Tag", name: "tag", widget: "string", required: false, hint: "e.g. Bestseller, Spicy" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/data/home.json"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Badge Text", name: "heroBadge", widget: "string", hint: "Small label above the headline" }
+          - { label: "Headline (before highlighted word)", name: "heroHeadingBefore", widget: "string" }
+          - { label: "Headline (highlighted word)", name: "heroHeadingEmphasis", widget: "string" }
+          - { label: "Headline (after highlighted word)", name: "heroHeadingAfter", widget: "string" }
+          - { label: "Subheading", name: "heroDescription", widget: "text" }
+          - { label: "Background Image", name: "heroImage", widget: "image" }
+          - { label: "Primary Button Label", name: "primaryCtaLabel", widget: "string" }
+          - { label: "Secondary Button Label", name: "secondaryCtaLabel", widget: "string" }
+          - label: "Why Us (3 cards)"
+            name: "whyUs"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - { label: "Menu Section Label", name: "menuEyebrow", widget: "string" }
+          - { label: "Menu Section Heading", name: "menuHeading", widget: "string" }
+          - { label: "Menu Section Link Label", name: "menuLinkLabel", widget: "string" }
+          - { label: "Closing Banner Heading", name: "ctaHeading", widget: "string" }
+          - { label: "Closing Banner Body", name: "ctaBody", widget: "text" }
+          - { label: "Closing Banner Button Label", name: "ctaButtonLabel", widget: "string" }
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "src/data/settings.json"
+        label: "Site Settings"
+        name: "settings"
+        fields:
+          - { label: "WhatsApp Number", name: "whatsappNumber", widget: "string", hint: "Digits only, country code first, no + or spaces." }
+          - { label: "WhatsApp Prefilled Message", name: "whatsappMessage", widget: "text" }
